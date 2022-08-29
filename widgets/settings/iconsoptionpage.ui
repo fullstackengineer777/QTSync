@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QtGui::IconsOptionPage</class>
+ <widget class="QWidget" name="QtGui::IconsOptionPage">
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Icons</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="preferences-desktop-icons">
+    <normaloff>.</normaloff>.</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,0">
+     <item>
+      <widget class="QLabel" name="contextLabel">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>32</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="contextCheckBox"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="dragAndDropInfoLabel">
+     <property name="text">
+      <string>Use Drag &amp; Drop to re-use a selected color at a different position.</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="statusIconsGroupBox">
+     <property name="title">
+      <string>Status icons</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="toolTip">
+           <string>Increase the rendering size if you're using a tray area with extraordinarily big icons.</string>
+          </property>
+          <property name="text">
+           <string>Rendering size</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QSlider" name="renderingSizeSlider">
+            <property name="minimum">
+             <number>16</number>
+            </property>
+            <property name="maximum">
+             <number>256</number>
+            </property>
+            <property name="singleStep">
+             <number>16</number>
+            </property>
+            <property name="pageStep">
+             <number>16</number>
+            </property>
+            <property name="value">
+             <number>32</number>
+            </property>
+            <property name="sliderPosition">
+             <number>16</number>
+            </property>
+            <property name="tracking">
+             <bool>false</bool>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="tickPosition">
+             <enum>QSlider::TicksBelow</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="renderingSizeLabel">
+            <property name="text">
+             <string>? px</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line1">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="1">
+         <widget class="QLabel" name="bgColor1Label">
+          <property name="text">
+           <string>Background color 1</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="bgColor2Label">
+          <property name="text">
+           <string>Background color 2</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLabel" name="previewLabel">
+          <property name="text">
+           <string>Preview</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QWidget" name="widget" native="true"/>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLabel" name="foregroundColorLabel">
+          <property name="text">
+           <string>Foreground color</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="restorePreviousPushButton">
+          <property name="text">
+           <string>Restore previous settings</string>
+          </property>
+          <property name="icon">
+           <iconset theme="edit-undo">
+            <normaloff>.</normaloff>.</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="restoreDefaultsPushButton">
+          <property name="text">
+           <string>Use preset</string>
+          </property>
+          <property name="icon">
+           <iconset theme="color-profile">
+            <normaloff>.</normaloff>.</iconset>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>contextCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>statusIconsGroupBox</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>224</x>
+     <y>39</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>115</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,72 @@
+[
+    {
+        "id": 4,
+        "type": "DownloadProgress",
+        "time": "2018-12-13T00:27:12.9876937Z",
+        "data": {
+            "zX8xfl3ygn-": {
+                "file1": {
+                    "Total": 800,
+                    "Pulling": 2,
+                    "CopiedFromOrigin": 0,
+                    "Reused": 633,
+                    "CopiedFromElsewhere": 0,
+                    "Pulled": 38,
+                    "BytesTotal": 104792064,
+                    "BytesDone": 87883776
+                },
+                "dir\\file2": {
+                    "Total": 80,
+                    "Pulling": 2,
+                    "CopiedFromOrigin": 0,
+                    "Reused": 0,
+                    "CopiedFromElsewhere": 0,
+                    "Pulled": 32,
+                    "BytesTotal": 10420224,
+                    "BytesDone": 8128768
+                }
+            },
+            "GXWxf-3zgnU": {
+                "file3": {
+                    "Total": 800,
+                    "Pulling": 2,
+                    "CopiedFromOrigin": 0,
+                    "Reused": 633,
+                    "CopiedFromElsewhere": 0,
+                    "Pulled": 38,
+                    "BytesTotal": 104792064,
+                    "BytesDone": 87883776
+                },
+                "directory1\\directory\\directory3\\directory4\\directory5\\directory3\\directory4\\directory5\\file4": {
+                    "Total": 80,
+                    "Pulling": 2,
+                    "CopiedFromOrigin": 0,
+                    "Reused": 0,
+                    "CopiedFromElsewhere": 0,
+                    "Pulled": 32,
+                    "BytesTotal": 10420224,
+                    "BytesDone": 8128768
+                },
+                "file4": {
+                    "Total": 80,
+                    "Pulling": 2,
+                    "CopiedFromOrigin": 0,
+                    "Reused": 0,
+                    "CopiedFromElsewhere": 0,
+                    "Pulled": 32,
+                    "BytesTotal": 2048,
+                    "BytesDone": 2000
+                }
+            }
+        }
+    },
+    {
+        "id": 24,
+        "type": "DeviceRejected",
+        "time": "2014-08-19T10:43:00.562821045+02:00",
+        "data": {
+            "address": "127.0.0.1:51807",
+            "device": "EJHMPAQ-OGCVORE-ISB4IS3-SYYVJXF-TKJGLTU-66DIQPF-GJ5D2GX-GQ3OWQK"
+        }
+    }
+]

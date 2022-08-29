@@ -1,0 +1,58 @@
+# C++ objects and libs
+*.slo
+*.lo
+*.o
+*.a
+*.la
+*.lai
+*.so
+*.dll
+*.dylib
+
+# Qt-es
+/.qmake.cache
+/.qmake.stash
+*.pro.user
+*.txt.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.moc
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+Makefile*
+*-build-*
+
+# QtCreator
+*.autosave
+
+# QtCtreator Qml
+*.qmlproject.user
+*.qmlproject.user.*
+
+# Go modules
+/libsyncthing/go/pkg
+
+# Dolphin
+.directory
+
+# documentation
+/doc
+
+# tests
+testfiles/output.*
+
+# experimental
+scripts/
+
+# clang-format
+/libsyncthing/.clang-format
+/cli/.clang-format
+/connector/.clang-format
+/fileitemactionplugin/.clang-format
+/model/.clang-format
+/testhelper/.clang-format
+/tray/.clang-format
+/plasmoid/lib/.clang-format
+/widgets/.clang-format

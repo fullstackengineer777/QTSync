@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QtGui::ConnectionOptionPage</class>
+ <widget class="QWidget" name="QtGui::ConnectionOptionPage">
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Connection</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="network-connect" resource="../../tray/resources/syncthingtrayicons.qrc">
+    <normaloff>:/icons/hicolor/scalable/actions/network-connect.svg</normaloff>:/icons/hicolor/scalable/actions/network-connect.svg</iconset>
+  </property>
+  <layout class="QFormLayout" name="formLayout">
+   <property name="verticalSpacing">
+    <number>4</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QLabel" name="instanceLabel">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Config label</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QFrame" name="selectionFrame">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>4</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QComboBox" name="selectionComboBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="downPushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="toolTip">
+         <string>Move currently selected configuration down</string>
+        </property>
+        <property name="icon">
+         <iconset theme="go-down" resource="../resources/syncthingwidgetsicons.qrc">
+          <normaloff>:/icons/hicolor/scalable/actions/go-down.svg</normaloff>:/icons/hicolor/scalable/actions/go-down.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="upPushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="toolTip">
+         <string>Move currently selected configuration up</string>
+        </property>
+        <property name="icon">
+         <iconset theme="go-up" resource="../resources/syncthingwidgetsicons.qrc">
+          <normaloff>:/icons/hicolor/scalable/actions/go-up.svg</normaloff>:/icons/hicolor/scalable/actions/go-up.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="addPushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="toolTip">
+         <string>Add secondary instance</string>
+        </property>
+        <property name="icon">
+         <iconset theme="list-add" resource="../resources/syncthingwidgetsicons.qrc">
+          <normaloff>:/icons/hicolor/scalable/actions/list-add.svg</normaloff>:/icons/hicolor/scalable/actions/list-add.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="removePushButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="toolTip">
+         <string>Remove currently selected secondary instance</string>
+        </property>
+        <property name="icon">
+         <iconset theme="list-remove" resource="../resources/syncthingwidgetsicons.qrc">
+          <normaloff>:/icons/hicolor/scalable/actions/list-remove.svg</normaloff>:/icons/hicolor/scalable/actions/list-remove.svg</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="instanceNoteIcon">
+     <property name="minimumSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLabel" name="instanceNoteLabel">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>It is possible to save multiple configurations. This allows switching quickly between multiple Syncthing instances using the connection button in the right corner of the tray menu. The config label is an arbitrary name to identify a configuration and does not have to match the name of the corresponding Syncthing device. The first configuration is the primary/default configuration.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="Line" name="line1">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="urlLabel">
+     <property name="text">
+      <string>Syncthing URL</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QtUtilities::ClearLineEdit" name="urlLineEdit"/>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="authLabel">
+     <property name="text">
+      <string>Authentication</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QCheckBox" name="authCheckBox"/>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="userNameLabel">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>User</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QtUtilities::ClearLineEdit" name="userNameLineEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="passwordLabel">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Password</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QtUtilities::ClearLineEdit" name="passwordLineEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="apiKeyLabel">
+     <property name="text">
+      <string>API key</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="QtUtilities::ClearLineEdit" name="apiKeyLineEdit"/>
+   </item>
+   <item row="9" column="0">
+    <widget class="QLabel" name="certificateLabel">
+     <property name="text">
+      <string>HTTPS certificate</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="1">
+    <widget class="QtUtilities::PathSelection" name="certPathSelection" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="1">
+    <layout class="QHBoxLayout" name="insertFromConfigFileLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="insertFromConfigFilePushButton">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-weight: bold;</string>
+       </property>
+       <property name="text">
+        <string>Insert values from local Syncthing configuration</string>
+       </property>
+       <property name="icon">
+        <iconset theme="edit-paste" resource="../resources/syncthingwidgetsicons.qrc">
+         <normaloff>:/icons/hicolor/scalable/actions/edit-paste.svg</normaloff>:/icons/hicolor/scalable/actions/edit-paste.svg</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="insertFromCustomConfigFilePushButton">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="toolTip">
+        <string>Select config file manually</string>
+       </property>
+       <property name="icon">
+        <iconset theme="document-open">
+         <normaloff>.</normaloff>
+         <normalon>:/icons/hicolor/scalable/actions/document-open.svg</normalon>.</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="11" column="1">
+    <widget class="Line" name="line2">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="0">
+    <widget class="QLabel" name="pollLabel">
+     <property name="text">
+      <string>Poll interval</string>
+     </property>
+     <property name="margin">
+      <number>1</number>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="1">
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="horizontalSpacing">
+      <number>10</number>
+     </property>
+     <property name="verticalSpacing">
+      <number>0</number>
+     </property>
+     <item row="0" column="1">
+      <widget class="QSpinBox" name="pollTrafficSpinBox">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="toolTip">
+        <string>Frequency for updating traffic statistics and download speed</string>
+       </property>
+       <property name="suffix">
+        <string> ms</string>
+       </property>
+       <property name="minimum">
+        <number>100</number>
+       </property>
+       <property name="maximum">
+        <number>999999999</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="pollTrafficLabel">
+       <property name="text">
+        <string>Traffic</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLabel" name="pollDevStatsLabel">
+       <property name="text">
+        <string>Device statistics</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="Line" name="line3">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4">
+      <widget class="QSpinBox" name="pollDevStatsSpinBox">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="toolTip">
+        <string>Frequency for updating device statistics</string>
+       </property>
+       <property name="suffix">
+        <string> ms</string>
+       </property>
+       <property name="minimum">
+        <number>100</number>
+       </property>
+       <property name="maximum">
+        <number>999999999</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="pollErrorsLabel">
+       <property name="text">
+        <string>Errors</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QSpinBox" name="pollErrorsSpinBox">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="toolTip">
+        <string>Frequency to poll for new errors</string>
+       </property>
+       <property name="suffix">
+        <string> ms</string>
+       </property>
+       <property name="minimum">
+        <number>100</number>
+       </property>
+       <property name="maximum">
+        <number>999999999</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QLabel" name="reconnectLabel">
+       <property name="text">
+        <string>Reconnect</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="4">
+      <widget class="QSpinBox" name="reconnectSpinBox">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="toolTip">
+        <string>Time to wait for reconnecting again when the connection to Syncthing has been lost. This setting might be overruled by systemd and launcher settings.</string>
+       </property>
+       <property name="specialValueText">
+        <string>no</string>
+       </property>
+       <property name="suffix">
+        <string> ms</string>
+       </property>
+       <property name="maximum">
+        <number>999999999</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="13" column="1">
+    <widget class="QCheckBox" name="autoConnectCheckBox">
+     <property name="toolTip">
+      <string>Whether to connect automatically on startup. This setting might be overruled by systemd and launcher settings.</string>
+     </property>
+     <property name="text">
+      <string>Connect automatically on startup</string>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="0">
+    <widget class="QLabel" name="overallStatusLabel">
+     <property name="text">
+      <string>Overall status</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="1">
+    <layout class="QVBoxLayout" name="statusComputionFlagsVerticalLayout">
+     <property name="spacing">
+      <number>2</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="statusComputionFlagsLabel">
+       <property name="text">
+        <string>Select what information should be considered to compute the overall status:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QListView" name="statusComputionFlagsListView">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="flow">
+        <enum>QListView::LeftToRight</enum>
+       </property>
+       <property name="isWrapping" stdset="0">
+        <bool>true</bool>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="15" column="0">
+    <widget class="QLabel" name="statusTextLabel">
+     <property name="text">
+      <string>Current status</string>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="1">
+    <widget class="QLabel" name="statusLabel">
+     <property name="text">
+      <string>disconnected</string>
+     </property>
+    </widget>
+   </item>
+   <item row="18" column="1">
+    <widget class="QPushButton" name="connectPushButton">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Apply connection settings and try to reconnect with the currently selected config</string>
+     </property>
+     <property name="icon">
+      <iconset theme="view-refresh" resource="../resources/syncthingwidgetsicons.qrc">
+       <normaloff>:/icons/hicolor/scalable/actions/view-refresh.svg</normaloff>:/icons/hicolor/scalable/actions/view-refresh.svg</iconset>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QtUtilities::ClearLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header location="global">qtutilities/widgets/clearlineedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QtUtilities::PathSelection</class>
+   <extends>QWidget</extends>
+   <header location="global">qtutilities/widgets/pathselection.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../tray/resources/syncthingtrayicons.qrc"/>
+  <include location="../resources/syncthingwidgetsicons.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>authCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>userNameLabel</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>authCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>userNameLineEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>authCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>passwordLabel</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>authCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>passwordLineEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

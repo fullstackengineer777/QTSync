@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/hicolor/scalable/actions/application-menu.svg</file>
+        <file>icons/hicolor/scalable/actions/edit-copy.svg</file>
+        <file>icons/hicolor/scalable/actions/folder-sync.svg</file>
+        <file>icons/hicolor/scalable/actions/help-about.svg</file>
+        <file>icons/hicolor/scalable/actions/media-playback-pause.svg</file>
+        <file>icons/hicolor/scalable/actions/media-playback-start.svg</file>
+        <file>icons/hicolor/scalable/actions/window-close.svg</file>
+        <file>icons/hicolor/scalable/apps/help-about.svg</file>
+        <file>icons/hicolor/scalable/places/folder-open.svg</file>
+        <file>icons/hicolor/scalable/places/folder.svg</file>
+        <file>icons/hicolor/scalable/places/network-workgroup.svg</file>
+        <file>icons/hicolor/scalable/actions/network-connect.svg</file>
+        <file>icons/hicolor/scalable/places/folder-download.svg</file>
+        <file>icons/hicolor/scalable/emblems/8/emblem-error.svg</file>
+        <file>icons/hicolor/scalable/actions/appointment-new.svg</file>
+        <file>icons/hicolor/scalable/actions/download.svg</file>
+    </qresource>
+</RCC>
